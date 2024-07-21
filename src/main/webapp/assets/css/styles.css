@@ -1,0 +1,29 @@
+ul.pagination.justify-content-center li.page-item{
+    padding: 5px;
+}
+div.col-auto button.btn.app-btn-secondary {
+    height: 30px;
+    padding: 0px;
+    margin: 0px 10px 0 0 ;
+    width: 70px;
+
+}
+
+/* div.row.g-3.mb-4.align-items-center.justify-content-between {
+    width: 90%;
+} */
+td.cell svg.bi.bi-star {
+    margin-bottom: 4px;
+}
+div.container-xl h2 {
+    text-align: center;
+    padding: 5px 0 10px ;
+}
+
+
+
+.app-card.app-card-stat.shadow-sm.h-100:hover {
+    transform: scale(1.05);
+    background-color: rgb(119, 224, 161);
+    transition: transform 0.4s ease; 
+}
