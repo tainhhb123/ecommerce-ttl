@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="connect.Dao"%>
+<%@ page import="java.util.Vector"%>
+<%@ page import="javax.servlet.http.HttpServletRequest"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>

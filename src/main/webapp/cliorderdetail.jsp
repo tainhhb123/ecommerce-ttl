@@ -1,4 +1,9 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="connect.Dao"%>
+<%@ page import="java.util.Vector"%>
+<%@ page import="javax.servlet.http.HttpServletRequest"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -9,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" >
+    <meta name="description">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
@@ -22,18 +27,31 @@
 
 </head> 
 
-<body class="app">   	
+<body class="app"> 
+ <%
+	Dao dao = new Dao();
+	Vector listO = dao.getOrderByIdOrder((String) request.getAttribute("idO"));
+	Vector listOd = dao.getOrderDetailByIdOrder((String) request.getAttribute("idO"));
+	%> 	  	
     <header class="app-header fixed-top">	   	            
         <div class="app-header-inner">  
 	        <div class="container-fluid py-2">
 		        <div class="app-header-content"> 
 		            <div class="row justify-content-between align-items-center">
+			        
 				    <div class="col-auto">
 					    <a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none" href="#">
 						    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg>
 					    </a>
 				    </div><!--//col-->
+		            <div class="search-mobile-trigger d-sm-none col">
+			            <i class="search-mobile-trigger-icon fa-solid fa-magnifying-glass"></i>
+			        </div><!--//col-->
+
+		            
 		            <div class="app-utilities col-auto">
+
+			            
 			            <div class="app-utility-item app-user-dropdown dropdown">
 				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="assets/images/user.png" alt="user profile"></a>
 				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
@@ -48,20 +66,19 @@
 	            </div><!--//app-header-content-->
 	        </div><!--//container-fluid-->
         </div><!--//app-header-inner-->
-        <div id="app-sidepanel" class="app-sidepanel"> 
+        <div id="app-sidepanel" class="app-sidepanel sidepanel-hidden"> 
 	        <div id="sidepanel-drop" class="sidepanel-drop"></div>
 	        <div class="sidepanel-inner d-flex flex-column">
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
 		        <div class="app-branding">
-		            <a class="app-logo" href="cliindex.jsp"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">TTL</span></a>
+		            <a class="app-logo" href="index.jsp"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">TTL</span></a>
 	
 		        </div><!--//app-branding-->  
-		        
 			    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
 				    <ul class="app-menu list-unstyled accordion" id="menu-accordion">
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link active" href="cliindex.jsp">
+					        <a class="nav-link " href="cliindex.jsp">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 		  <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
@@ -74,7 +91,7 @@
 
 						<li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="cliorders.jsp">
+					        <a class="nav-link active" href="cliorders.jsp">
 						        <span class="nav-icon">
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
 										<path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/>
@@ -150,7 +167,6 @@
 				    </ul><!--//app-menu-->
 			    </nav><!--//app-nav-->
 
-		       
 	        </div><!--//sidepanel-inner-->
 	    </div><!--//app-sidepanel-->
     </header><!--//app-header-->
@@ -160,105 +176,97 @@
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
 			    
-			    <h1 class="app-page-title">Overview</h1>
-			    
+			    <div class="row g-3 mb-4 align-items-center justify-content-between">
+				    <div class="col-auto">
+			            <h1 class="app-page-title mb-0">Order Details</h1>
+				    </div>
 
-				    
-			    <div class="row g-4 mb-4">
-				    <div class="col-6 col-lg-3">
-					    <div class="app-card app-card-stat shadow-sm h-100">
-						    <div class="app-card-body p-3 p-lg-4">
-							    <h4 class="stats-type mb-1">Total Sales</h4>
-							    <div class="stats-figure">3000000</div>
-							    <div class="stats-meta text-success">vnd</div>
-						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
-					    </div><!--//app-card-->
-				    </div><!--//col-->
-				    
-				    <div class="col-6 col-lg-3">
-					    <div class="app-card app-card-stat shadow-sm h-100">
-						    <div class="app-card-body p-3 p-lg-4">
-							    <h4 class="stats-type mb-1">Profit</h4>
-							    <div class="stats-figure">2000000</div>
-							    <div class="stats-meta text-success">vnd</div>
-						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
-					    </div><!--//app-card-->
-				    </div><!--//col-->
-				    <div class="col-6 col-lg-3">
-					    <div class="app-card app-card-stat shadow-sm h-100">
-						    <div class="app-card-body p-3 p-lg-4">
-							    <h4 class="stats-type mb-1">Products Sold</h4>
-							    <div class="stats-figure">23</div>
-							    <div class="stats-meta">Month</div>
-						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
-					    </div><!--//app-card-->
-				    </div><!--//col-->
-				    <div class="col-6 col-lg-3">
-					    <div class="app-card app-card-stat shadow-sm h-100">
-						    <div class="app-card-body p-3 p-lg-4">
-							    <h4 class="stats-type mb-1">Order</h4>
-							    <div class="stats-figure">6</div>
-							    <div class="stats-meta">Month</div>
-						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
-					    </div><!--//app-card-->
-				    </div><!--//col-->
 			    </div><!--//row-->
+			   
+				
+				
+				<div class="tab-content" id="orders-table-tab-content">
+			        <div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
 
-			    <div class="row g-4 mb-4">
-			        <div class="col-12 col-lg-6">
-					    <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Area Line Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-line" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-			        </div><!--//col-->
-		            <div class="col-12 col-lg-6">		        
-				        <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Bar Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-bar" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-		            </div><!--//col-->
-		            <div class="col-12 col-lg-6">		        
-				        <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Pie Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-pie" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-		            </div><!--//col-->
-		            <div class="col-12 col-lg-6">		        
-				        <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Doughnut Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-doughnut" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-		            </div><!--//col-->
-			    </div><!--//row-->
+						<div class="app-card app-card-orders-table shadow-sm mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table app-table-hover mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">OrderCode</th>
+												<th class="cell">Address</th>
+												<th class="cell">Customer</th>
+												<th class="cell">Date</th>
+												<th class="cell">Phone Number</th>
+												<th class="cell">Total</th>
+											</tr>
+										</thead>
+										<tbody>
+										<c:set var="dto" value="<%=listO%>" />
+											<c:if test="${not empty dto}">
+												
+											<tr>
+												<td class="cell">${dto.get(0)}</td>
+												<td class="cell">${dto.get(8)}</td>
+												<td class="cell">${dto.get(7)}</td>
+												<td class="cell">${dto.get(1)}</td>
+												<td class="cell">${dto.get(6)}</td>
+												<td class="cell">${dto.get(4)}</td>
+											</tr>
+									
+											</c:if>
+		
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						       
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
 
+					    <div class="app-card app-card-orders-table shadow-sm mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table app-table-hover mb-0 text-left">
+										<thead>
+											<tr>
+												
+												<th class="cell">Product</th>
+												<th class="cell">Product Id</th>
+												<th class="cell">Size</th>
+												<th class="cell">Color</th>
+												<th class="cell">Quantity</th>
+											
+											</tr>
+										</thead>
+										<tbody>
+										<c:set var="result" value="<%=listOd%>" />
+											<c:if test="${not empty result}">
+												<c:forEach var="dto" items="${result}">
+											<tr>
+												
+												<td class="cell">${dto.get(7)}</td>
+												<td class="cell">${dto.get(2)}</td>
+												<td class="cell">${dto.get(3)}</td>
+												<td class="cell">${dto.get(4)}</td>
+												<td class="cell">${dto.get(6)}</td>
+											
+											</tr>
+											</c:forEach>
+											</c:if>
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						       
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
+
+						
+			        </div><!--//tab-pane-->
+
+				</div><!--//tab-content-->
+				
+				
 			    
 		    </div><!--//container-fluid-->
 	    </div><!--//app-content-->
@@ -273,10 +281,7 @@
     <!-- Javascript -->          
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-	<script src="assets/js/charts-demo.js"></script> 
+    
     
     <!-- Page Specific JS -->
     <script src="assets/js/app.js"></script> 

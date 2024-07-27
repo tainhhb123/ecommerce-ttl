@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -19,6 +18,7 @@
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	
 
 </head> 
 
@@ -27,7 +27,7 @@
         <div class="app-header-inner">  
 	        <div class="container-fluid py-2">
 		        <div class="app-header-content"> 
-		            <div class="row justify-content-between align-items-center">
+		            <div class="row justify-content-between align-items-center">    
 				    <div class="col-auto">
 					    <a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none" href="#">
 						    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg>
@@ -53,7 +53,7 @@
 	        <div class="sidepanel-inner d-flex flex-column">
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
 		        <div class="app-branding">
-		            <a class="app-logo" href="cliindex.jsp"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">TTL</span></a>
+		            <a class="app-logo" href="index.jsp"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">TTL</span></a>
 	
 		        </div><!--//app-branding-->  
 		        
@@ -61,12 +61,12 @@
 				    <ul class="app-menu list-unstyled accordion" id="menu-accordion">
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link active" href="cliindex.jsp">
+					        <a class="nav-link" href="cliindex.jsp">
 						        <span class="nav-icon">
-						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-		  <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
-		  <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-		</svg>
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+										<path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+									  </svg>
 						         </span>
 		                         <span class="nav-link-text">Overview</span>
 					        </a><!--//nav-link-->
@@ -85,7 +85,7 @@
 					    </li><!--//nav-item-->
 					    <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link submenu-toggle " href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
+					        <a class="nav-link submenu-toggle active" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="true" aria-controls="submenu-1">
 						        <span class="nav-icon">
 						        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-files" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -95,16 +95,15 @@
 						         </span>
 		                         <span class="nav-link-text">Product</span>
 		                         <span class="submenu-arrow">
-		                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-									  </svg>
+		                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+	</svg>
 	                             </span><!--//submenu-arrow-->
 					        </a><!--//nav-link-->
-					        <div id="submenu-1" class="collapse submenu submenu-1 " data-bs-parent="#menu-accordion">
+					        <div id="submenu-1" class="collapse submenu submenu-1 show" data-bs-parent="#menu-accordion">
 						        <ul class="submenu-list list-unstyled">
 							        <li class="submenu-item"><a class="submenu-link " href="clilistproduct.jsp">List Product</a></li>
-							        <li class="submenu-item"><a class="submenu-link" href="cliaddproduct.jsp">Add Product</a></li>
-					
+							        <li class="submenu-item"><a class="submenu-link " href="cliaddproduct.jsp">Add Product</a></li>
 							        
 							        
 						        </ul>
@@ -132,7 +131,6 @@
 		                         <span class="nav-link-text">Brands</span>
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
-						
 						<li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link" href="clivoucher.jsp">
@@ -145,7 +143,9 @@
 		                         <span class="nav-link-text">Vouchers</span>
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
-				    
+					    
+
+					    
 				    
 				    </ul><!--//app-menu-->
 			    </nav><!--//app-nav-->
@@ -159,113 +159,90 @@
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
-			    
-			    <h1 class="app-page-title">Overview</h1>
-			    
+			    <div class="row g-3 mb-4 align-items-center justify-content-between">
+				    <div class="col-auto">
+			            <h1 class="app-page-title mb-0">Edit Product</h1>
+				    </div>
 
-				    
-			    <div class="row g-4 mb-4">
-				    <div class="col-6 col-lg-3">
-					    <div class="app-card app-card-stat shadow-sm h-100">
-						    <div class="app-card-body p-3 p-lg-4">
-							    <h4 class="stats-type mb-1">Total Sales</h4>
-							    <div class="stats-figure">3000000</div>
-							    <div class="stats-meta text-success">vnd</div>
-						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
-					    </div><!--//app-card-->
-				    </div><!--//col-->
-				    
-				    <div class="col-6 col-lg-3">
-					    <div class="app-card app-card-stat shadow-sm h-100">
-						    <div class="app-card-body p-3 p-lg-4">
-							    <h4 class="stats-type mb-1">Profit</h4>
-							    <div class="stats-figure">2000000</div>
-							    <div class="stats-meta text-success">vnd</div>
-						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
-					    </div><!--//app-card-->
-				    </div><!--//col-->
-				    <div class="col-6 col-lg-3">
-					    <div class="app-card app-card-stat shadow-sm h-100">
-						    <div class="app-card-body p-3 p-lg-4">
-							    <h4 class="stats-type mb-1">Products Sold</h4>
-							    <div class="stats-figure">23</div>
-							    <div class="stats-meta">Month</div>
-						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
-					    </div><!--//app-card-->
-				    </div><!--//col-->
-				    <div class="col-6 col-lg-3">
-					    <div class="app-card app-card-stat shadow-sm h-100">
-						    <div class="app-card-body p-3 p-lg-4">
-							    <h4 class="stats-type mb-1">Order</h4>
-							    <div class="stats-figure">6</div>
-							    <div class="stats-meta">Month</div>
-						    </div><!--//app-card-body-->
-						    <a class="app-card-link-mask" href="#"></a>
-					    </div><!--//app-card-->
-				    </div><!--//col-->
-			    </div><!--//row-->
 
-			    <div class="row g-4 mb-4">
-			        <div class="col-12 col-lg-6">
-					    <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Area Line Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-line" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-			        </div><!--//col-->
-		            <div class="col-12 col-lg-6">		        
-				        <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Bar Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-bar" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-		            </div><!--//col-->
-		            <div class="col-12 col-lg-6">		        
-				        <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Pie Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-pie" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-		            </div><!--//col-->
-		            <div class="col-12 col-lg-6">		        
-				        <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Doughnut Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-doughnut" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-		            </div><!--//col-->
-			    </div><!--//row-->
 
-			    
+					<div class="row g-4 settings-section">
+
+						<div class="col-12 col-md-12">
+							<div class="app-card app-card-settings shadow-sm p-4">
+								
+								<div class="app-card-body">
+									<form class="settings-form" action="" method="post" enctype="multipart/form-data">
+										<div class="mb-3 row">
+											<div class="col-5">
+												<label for="setting-input-2" class="form-label">Name</label>
+												<input type="text" class="form-control" id="setting-input-2" placeholder="name product" required>
+											</div>
+											<div class="col-2">
+												<label for="setting-input-2" class="form-label">Brand</label>
+												<select class="form-select">
+													<option selected="" value="option-1">All</option>
+													<option value="option-2">Text file</option>
+											  </select>
+											</div>
+											<div class="col-2">
+												<label for="setting-input-2" class="form-label">Category</label>
+												<select class="form-select">
+													<option selected="" value="option-1">All</option>
+													<option value="option-2">Text file</option>
+											  </select>
+											</div>
+											<div class="col-2">
+												<label for="setting-input-2" class="form-label">Sex</label>
+												<select class="form-select">
+													<option selected="" value="option-1">All</option>
+													<option value="option-2">Text file</option>
+											  </select>
+											</div>
+											<div class="col-1">
+												<label for="setting-input-2" class="form-label">Affiliate</label>
+												<input type="number" class="form-control" id="setting-input-2" placeholder="%" required>
+											</div>
+										</div>
+										<div class="mb-3">
+											<label for="setting-input-3" class="form-label">Describe</label>
+											<textarea class="form-control" id="setting-input-3" ></textarea>
+										</div>
+
+
+										<div class=" mb-3 row">
+											
+												<div class="col-7 d-flex me-5">
+													<label for="setting-input-3" class="form-label pt-2 me-2 ">Images:</label>
+													<input class="form-control" type="file" name="imageFiles" multiple accept="image/*">
+												</div>
+										
+											
+											<div class="form-check form-switch ms-3 col-1 pt-2">
+												<input class="form-check-input" type="checkbox" id="settings-switch-1" checked>
+												<label class="form-check-label ms-1" for="settings-switch-1">Status</label>
+											</div>
+
+											<div class="col-2">
+											<button type="submit" class="btn app-btn-primary ">Add Product</button>
+										</div>
+										</div>
+									</form>
+								</div><!--//app-card-body-->
+								
+							</div><!--//app-card-->
+						</div>
+					</div><!--//row-->
+
+
+
+				</div>
+			</div>
+
+
 		    </div><!--//container-fluid-->
 	    </div><!--//app-content-->
-	    
-	    <footer class="app-footer">
 
-	    </footer><!--//app-footer-->
 	    
     </div><!--//app-wrapper-->    					
 
@@ -274,9 +251,6 @@
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-	<script src="assets/js/charts-demo.js"></script> 
     
     <!-- Page Specific JS -->
     <script src="assets/js/app.js"></script> 

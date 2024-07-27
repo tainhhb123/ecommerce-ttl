@@ -32,7 +32,7 @@ public class Login extends HttpServlet {
 		Dao dao = new Dao();
 		Vector user = dao.geUser(name, pass);
 		
-		if(user!=null) {
+		if(user!=null && (int)user.get(8)==1) {
 			Vector<Vector> role = dao.geRoleOfUser((int)user.get(0));
 			System.out.println(user);
 			javax.servlet.http.HttpSession session = request.getSession();
