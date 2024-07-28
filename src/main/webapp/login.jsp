@@ -1,9 +1,9 @@
-<<<<<<< HEAD
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="connect.Dao"%>
+<%@ page import="java.util.Vector"%>
 <%@ page import="javax.servlet.http.HttpServletRequest"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-=======
->>>>>>> 3fc53370ae0a56ed70bcb01ca87d24a9257daf9d
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -34,26 +34,6 @@
 				    <div class="app-auth-branding mb-4"><a class="app-logo" href="index.jsp"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"></a></div>
 					<h2 class="auth-heading text-center mb-5">Log in to TTL</h2>
 			        <div class="auth-form-container text-start">
-<<<<<<< HEAD
-			        
-						<form class="auth-form login-form" method="post" action="LoginServlet">         
-							<div class="email mb-3">
-								<label class="sr-only" for="signin-email">Email</label>
-								<input id="signin-email" name="signin-email" type="email" class="form-control signin-email" placeholder="Email address" required="required">
-							</div><!--//form-group-->
-							<div class="password mb-3">
-								<label class="sr-only" for="signin-password">Password</label>
-								<input id="signin-password" name="signin-password" type="password" class="form-control signin-password" placeholder="Password" required="required">
-								<div class="extra mt-3 row justify-content-between">
-									<div class="col-6">
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" value="" id="RememberPassword">
-											<label class="form-check-label" for="RememberPassword">
-											Remember me
-											</label>
-										</div>
-									</div><!--//col-6-->
-=======
 						<form class="auth-form login-form" action="Login" method="post">  
 						<c:set var="signal" value="${requestScope.signal}" />
 							<c:if test="${not empty signal}">
@@ -70,7 +50,6 @@
 								<input id="signin-password" name="password" type="password" class="form-control signin-password" placeholder="Password" required="required">
 								<div class="extra mt-3 row justify-content-between">
 									<div class="col-6"></div><!--//col-6-->
->>>>>>> 3fc53370ae0a56ed70bcb01ca87d24a9257daf9d
 									<div class="col-6">
 										<div class="forgot-password text-end">
 											<a href="reset-password.jsp">Forgot password?</a>
@@ -83,10 +62,6 @@
 							</div>
 						</form>
 						
-<<<<<<< HEAD
-						
-=======
->>>>>>> 3fc53370ae0a56ed70bcb01ca87d24a9257daf9d
 						<div class="auth-option text-center pt-5">No Account? Sign up <a class="text-link" href="signup.jsp" >here</a>.</div>
 					</div><!--//auth-form-container-->	
 
@@ -106,25 +81,14 @@
 				    <div class="h-100"></div>
 				    <div class="overlay-content p-3 p-lg-4 rounded">
 					    <h5 class="mb-3 overlay-title">TTL</h5>
-<<<<<<< HEAD
-					    <div>SÃ n thÆ°Æ¡ng máº¡i Äiá»n tá»­ vá» thá»i trang vÃ  lÃ  diá»n ÄÃ n nÆ¡i chia sáº½ cÃ¡c kiáº¿n thá»©c, quan Äiá»m hay phong cÃ¡ch thá»i trang riÃªng</div>
-=======
 					    <div>Sàn thương mại điện tử về thời trang và là diễn đàn nơi chia sẽ các kiến thức, quan điểm hay phong cách thời trang riêng</div>
->>>>>>> 3fc53370ae0a56ed70bcb01ca87d24a9257daf9d
 				    </div>
 				</div>
 		    </div><!--//auth-background-overlay-->
 	    </div><!--//auth-background-col-->
     
     </div><!--//row-->
-<<<<<<< HEAD
- <% if (request.getParameter("error") != null) { %>
-        <p style="color:red;">Invalid email or password.</p>
-    <% } %>
-=======
 
->>>>>>> 3fc53370ae0a56ed70bcb01ca87d24a9257daf9d
 
 </body>
 </html> 
-
